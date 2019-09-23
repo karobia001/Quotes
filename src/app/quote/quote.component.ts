@@ -8,8 +8,8 @@ import {Quote} from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote [] = [
-   new Quote (1,'Where their is love their is peace','_posted by Dennis karobia'),
-   new Quote  (2, 'Love For All, Hatred For None','_posted by Maina karobia'),
+   new Quote (1,'Where their is love their is peace','_posted by Dennis karobia',new Date(2019,6,9)),
+   new Quote  (2, 'Love For All, Hatred For None','_posted by Maina karobia',new Date(2019,6,9)),
     
   ];
   toggleDetails(index){
