@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Quotes} from '../quote';
+import {Quote} from '../quote';
 
 @Component({
   selector: 'app-quote',
@@ -7,15 +7,15 @@ import {Quotes} from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-
-  quotes:Quotes = [
-    {id:1, quote1:'You have to write the book that wants to be written. And if the book will be too difficult for grown-ups, then you write it for children. posted by THE QUONTUM', author1:'Madeleine L Engle'},
-    {id:2,quote2:'If you do not have time to read, you do not have the time (or the tools) to write. Simple as that.  posted by THE QUONTUM', author2:'Stephen King'},
-    {id:3,quote3:'We write to taste life twice, in the moment and in retrospect. posted by THE QUONTUM',author3:'Anaïs Nin'},
-    {id:4,quote4:'If there is a book that you want to read, but it has not been written yet, then you must write it. posted by THE QUONTUM ', author4:'Toni Morrison'},
-    {id:5,quote5:'Don’t tell people your plans. Show them your results. posted by THE QUONTUM ' , author5:'Dennis karobia'},
+  quotes:Quote [] = [
+   new Quote (1,'Where their is love their is peace','_posted by Dennis karobia'),
+   new Quote  (2, 'Love For All, Hatred For None','_posted by Maina karobia'),
+    
   ];
-
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+  
   constructor() { }
 
   ngOnInit() {
