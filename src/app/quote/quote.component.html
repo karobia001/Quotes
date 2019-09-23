@@ -1,6 +1,6 @@
 <div class="container">
     <div class="cont1">
-        <div><br><br><br><br>
+        <div><br><br><br><br><br><br><br>
             <h1>THE QUOTONIUM</h1><br><br><br>
             <h3>we are here to inspire </h3>
             <br><br><br><br><br><br>
@@ -12,5 +12,14 @@
                 {{ quote.name }}
                 <button (click)='toggleDetails(i)'>info</button>
                 <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+                
             </div>
+           
     </div>
+    </div>
+    <div class="col-md-12">
+        <app-quote-form></app-quote-form>
+      </div>
+    </div>
+
+        
