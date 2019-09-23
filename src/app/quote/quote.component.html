@@ -11,7 +11,9 @@
       <div class="card-body">
         <div *ngFor='let quote of quotes'>
           {{ quote.quote1 }}
+          <p>
           {{ quote.author1 }}
+          </p>
         </div><br>
       </div>
       <footer class="blockquote-footer">
@@ -25,9 +27,13 @@
     </div>
     <div class="card p-3 bg-warning">
       <blockquote class="blockquote mb-0 card-body">
-        <p *ngFor='let quote of quotes'>
+        <div *ngFor='let quote of quotes'>
           {{ quote.quote2 }}
+        
+        <p>
+            {{ quote.author2 }}
         </p>
+      </div>
         <footer class="blockquote-footer">
           <span (click)="delete(i)" class="del text-white ">
             <i class="fa fa-trash"></i>
@@ -37,10 +43,14 @@
     </div>
     <div class="card bg-success text-white">
       <div class="card-body">
-        <p *ngFor='let quote of quotes'>
+        <div *ngFor='let quote of quotes'>
           {{ quote.quote3 }}
+        
+        <p>
+            {{ quote.author3 }} 
         </p>
       </div>
+    </div>
       <footer class="blockquote-footer">
         <span (click)="delete(i)" class="del text-white">
           <i class="fa fa-trash"></i>
@@ -49,9 +59,13 @@
     </div>
     <div class="card bg-primary text-white text-center p-3">
       <blockquote class="blockquote mb-0">
-        <p *ngFor='let quote of quotes'>
+        <div *ngFor='let quote of quotes'>
           {{ quote.quote4 }}
+        
+        <p>
+            {{ quote.author4 }}
         </p>
+      </div>
         <footer class="blockquote-footer">
           <span (click)="delete(i)" class="del text-white">
             <i class="fa fa-trash"></i>
@@ -61,9 +75,13 @@
     </div>
     <div class="card text-center bg-info">
       <div class="card-body">
-        <p *ngFor='let quote of quotes'>
+        <div *ngFor='let quote of quotes'>
           {{ quote.quote5 }}
+        
+        <p>
+            {{ quote.author5 }}
         </p>
+        </div>
       </div>
       <footer class="blockquote-footer">
         <span (click)="delete(i)" class="del text-white">
@@ -72,9 +90,13 @@
       </footer>
     </div>
     <div class="card bg-muted">
-      <p *ngFor='let quote of quotes'>
+      <div *ngFor='let quote of quotes'>
         {{ quote.quote4 }}
-      </p>
+
+        <p>
+            {{ quote.author4 }}
+        </p>
+      </div>
       <span (click)="delete(i)" class="del">
         <i class="fa fa-trash"></i>
       </span>
@@ -83,9 +105,13 @@
     </div>
     <div class="card p-3 text-right bg-warning">
       <blockquote class="blockquote mb-0">
-        <p *ngFor='let quote of quotes'>
+        <div *ngFor='let quote of quotes'>
           {{ quote.quote5 }}
-        </p>
+
+          <p>
+              {{ quote.author5 }}
+          </p>
+        </div>
         <footer class="blockquote-footer">
             <span (click)="delete(i)" class="del text-white">
                 <i class="fa fa-trash"></i>
