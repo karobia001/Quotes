@@ -1,11 +1,6 @@
-export class Goal {
-    id: number;
-    name: string;
-    quote1:string;
-    quote2:string;
-    quote3:string;
-    quote4:string;
-    quote5:string;
-    quote6:string;
-    author:string;
+export class Quote {
+   public showDescription: boolean;
+   constructor(public id: number,public name: string,public description: string, public completeDate: Date){
+    this.showDescription=false;
+  }
   }

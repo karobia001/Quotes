@@ -1,65 +1,100 @@
 <div class="container">
-        <div class="cont1">
-      <div><br><br><br><br>
-        <h1>THE QUOTONIUM</h1><br><br><br>
-        <h3>we are here to inspire </h3>
-        <br><br><br><br><br><br>
-        </div>
+  <div class="cont1"><br><br><br><br>
+    <div><br><br><br><br>
+      <h1>THE QUOTONIUM</h1><br><br><br>
+      <h3>we are here to inspire </h3>
+      <br><br><br><br><br><br>
+    </div>
+  </div><br>
+  <div class="card-columns">
+    <div class="card bg-danger text-white">
+      <div class="card-body">
+        <div *ngFor='let quote of quotes'>
+          {{ quote.quote1 }}
+          {{ quote.author1 }}
         </div><br>
-      <div class="card-columns">
-          <div class="card bg-danger text-white">
-            <div class="card-body">
-              <div *ngFor='let quote of quotes'>
-                  {{ quote.quote1 }}
-                  {{ quote.author }}
-                 </div><br>
-            </div>
+      </div>
+      <footer class="blockquote-footer">
+        <span (click)="delete(i)" class="del text-white">
+          <i class="fa fa-trash"></i>
+        </span>
+        <div class="col-3 action" (click)="quote.upvotes = quote.upvotes + 1">
+            <i class="fa fa-thumbs-up"></i>
           </div>
-          <div class="card p-3 bg-warning">
-            <blockquote class="blockquote mb-0 card-body">
-                <p *ngFor='let quote of quotes'>
-                    {{ quote.quote2 }}
-                   </p>
-              <footer class="blockquote-footer">
-              </footer>
-            </blockquote>
-          </div>
-          <div class="card bg-success text-white">
-            <div class="card-body">
-              <p *ngFor='let quote of quotes'>
-                  {{ quote.quote3 }}
-                 </p>
-            </div>
-          </div>
-          <div class="card bg-primary text-white text-center p-3">
-            <blockquote class="blockquote mb-0">
-                <p *ngFor='let quote of quotes'>
-                    {{ quote.quote4 }}
-                   </p>
-              <footer class="blockquote-footer">
-              
-              </footer>
-            </blockquote>
-          </div>
-          <div class="card text-center bg-info">
-            <div class="card-body">
-              <p *ngFor='let quote of quotes'>
-                  {{ quote.quote5 }}
-                 </p>
-            </div>
-          </div>
-          <div class="card bg-muted">
-              <p *ngFor='let quote of quotes'>
-                  {{ quote.quote4 }}
-                 </p>
-          </div>
-          <div class="card p-3 text-right bg-warning">
-            <blockquote class="blockquote mb-0">
-                <p *ngFor='let quote of quotes'>
-                    {{ quote.quote5 }}
-                   </p>
-              <footer class="blockquote-footer">
-              </footer>
-            </blockquote>
-          </div>
-        </div>
+      </footer>
+    </div>
+    <div class="card p-3 bg-warning">
+      <blockquote class="blockquote mb-0 card-body">
+        <p *ngFor='let quote of quotes'>
+          {{ quote.quote2 }}
+        </p>
+        <footer class="blockquote-footer">
+          <span (click)="delete(i)" class="del text-white ">
+            <i class="fa fa-trash"></i>
+          </span>
+        </footer>
+      </blockquote>
+    </div>
+    <div class="card bg-success text-white">
+      <div class="card-body">
+        <p *ngFor='let quote of quotes'>
+          {{ quote.quote3 }}
+        </p>
+      </div>
+      <footer class="blockquote-footer">
+        <span (click)="delete(i)" class="del text-white">
+          <i class="fa fa-trash"></i>
+        </span>
+      </footer>
+    </div>
+    <div class="card bg-primary text-white text-center p-3">
+      <blockquote class="blockquote mb-0">
+        <p *ngFor='let quote of quotes'>
+          {{ quote.quote4 }}
+        </p>
+        <footer class="blockquote-footer">
+          <span (click)="delete(i)" class="del text-white">
+            <i class="fa fa-trash"></i>
+          </span>
+        </footer>
+      </blockquote>
+    </div>
+    <div class="card text-center bg-info">
+      <div class="card-body">
+        <p *ngFor='let quote of quotes'>
+          {{ quote.quote5 }}
+        </p>
+      </div>
+      <footer class="blockquote-footer">
+        <span (click)="delete(i)" class="del text-white">
+          <i class="fa fa-trash"></i>
+        </span>
+      </footer>
+    </div>
+    <div class="card bg-muted">
+      <p *ngFor='let quote of quotes'>
+        {{ quote.quote4 }}
+      </p>
+      <span (click)="delete(i)" class="del">
+        <i class="fa fa-trash"></i>
+      </span>
+
+
+    </div>
+    <div class="card p-3 text-right bg-warning">
+      <blockquote class="blockquote mb-0">
+        <p *ngFor='let quote of quotes'>
+          {{ quote.quote5 }}
+        </p>
+        <footer class="blockquote-footer">
+            <span (click)="delete(i)" class="del text-white">
+                <i class="fa fa-trash"></i>
+              </span>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <app-quote-detail [quote]='goal'></app-quote-detail>
+
+  <app-quote-form></app-quote-form>
