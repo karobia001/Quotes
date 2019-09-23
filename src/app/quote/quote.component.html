@@ -7,10 +7,10 @@
         </div>
     </div><br>
     <div class="card-columns">
-            <div class="card bg-danger text-white"  *ngFor='let quote of quotes;let i = index'>
+            <div class="card bg-warning text-black"  *ngFor='let quote of quotes;let i = index'>
               <div class="card-body"  >
                 {{ quote.name }}
-                <button (click)='toggleDetails(i)'>Toggle Details</button>
-                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>
+                <button (click)='toggleDetails(i)'>info</button>
+                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
             </div>
     </div>
